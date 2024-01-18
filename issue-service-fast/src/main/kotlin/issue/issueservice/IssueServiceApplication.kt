@@ -1,4 +1,4 @@
-package com.issue
+package issue.issueservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
