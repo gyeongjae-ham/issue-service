@@ -4,6 +4,7 @@ import issue.issueservice.config.AuthUser
 import issue.issueservice.domain.enums.IssueStatus
 import issue.issueservice.model.IssueRequest
 import issue.issueservice.service.IssueService
+import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -36,4 +37,11 @@ class IssueController(
         @PathVariable id: Long,
         @RequestBody request: IssueRequest,
     ) = issueService.edit(authUser.userId, id, request)
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun delete(
+        authUser: AuthUser,
+        @PathVariable id: Long,
+    ) = issueService.delete(id)
 }
