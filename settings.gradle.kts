@@ -3,3 +3,4 @@ plugins {
 }
 rootProject.name = "issue-service"
 include("issue-service-fast")
+include("user-service")
