@@ -4,5 +4,5 @@ server:
 jwt:
   issuer: jara
   subject: auth
-  expire-time: 3600
+  expires-time: 3600
   secret: my-secret
